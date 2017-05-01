@@ -1,0 +1,42 @@
+{
+  "name": "layout-or-get-out",
+  "version": "1.0.0",
+  "description": "Taller CSS",
+  "homepage": "https://github.com/gangsthub/layout-or-get-out",
+  "scripts": {
+    "test": "grunt test",
+    "start": ""
+  },
+  "author": {
+    "name": "gangsthub"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gangsthub/layout-or-get-out.git"
+  },
+  "dependencies": {
+    "underscore": "~1.5.1",
+    "express": "~2.5.9",
+    "mustache": "~0.7.2",
+    "socket.io": "~0.9.13"
+  },
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-connect": "^2.0.5",
+    "gulp-cssmin": "^0.1.5",
+    "gulp-header": "^1.0.2",
+    "gulp-jshint": "^1.6.1",
+    "gulp-qunit": "^0.3.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-watch": "^0.6.5",
+    "gulp-zip": "^0.3.4"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/gangsthub/layout-or-get-out/blob/master/LICENSE"
+    }
+  ]
+}

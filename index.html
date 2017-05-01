@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Taller CSS</title>
+
+		<meta name="description" content="Taller CSS para programadores">
+		<meta name="author" content="Paul Melero">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Sesión de maquetación HTML5-CSS3</h2>
+					<h5>HTML ❤ CSS</h5>
+					<hr>
+					<p>
+						Paul Melero
+					</p>
+					<br>
+					<p><small>
+						<svg viewBox="0 0 300.00006 244.18703" width="36" version="1.1"
+							 preserveAspectRatio="xMinYMin">
+							<g style="" transform="translate(-539.18 -568.86)">
+								<path d="m633.9 812.04c112.46 0 173.96-93.168 173.96-173.96 0-2.6463-0.0539-5.2806-0.1726-7.903 11.938-8.6302 22.314-19.4 30.498-31.66-10.955 4.8694-22.744 8.1474-35.111 9.6255 12.623-7.5693 22.314-19.543 26.886-33.817-11.813 7.0031-24.895 12.093-38.824 14.841-11.157-11.884-27.041-19.317-44.629-19.317-33.764 0-61.144 27.381-61.144 61.132 0 4.7978 0.5364 9.4646 1.5854 13.941-50.815-2.5569-95.874-26.886-126.03-63.88-5.2508 9.0354-8.2785 19.531-8.2785 30.73 0 21.212 10.794 39.938 27.208 50.893-10.031-0.30992-19.454-3.0635-27.69-7.6468-0.009 0.25652-0.009 0.50661-0.009 0.78077 0 29.61 21.075 54.332 49.051 59.934-5.1376 1.4006-10.543 2.1516-16.122 2.1516-3.9336 0-7.766-0.38716-11.491-1.1026 7.7838 24.293 30.355 41.971 57.115 42.465-20.926 16.402-47.287 26.171-75.937 26.171-4.929 0-9.7983-0.28036-14.584-0.84634 27.059 17.344 59.189 27.464 93.722 27.464" fill="#657b83"/>
+							</g>
+						</svg>
+						&nbsp;
+						<a href="http://twitter.com/pollobrav0">@pollobrav0</a>
+					</small></p>
+					<p><small>
+						<svg viewBox="0 0 16 16" width="36" preserveAspectRatio="xMinYMin" version="1.1">
+							<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+						</svg>
+						&nbsp;
+						<a href="https://github.com/gangsthub/layout-or-get-out">https://github.com/gangsthub/layout-or-get-out</a>
+					</small></p>
+				</section>
+
+				<section>
+					<h2>CSS</h2>
+					<article>
+						<p class="fragment current-visible">Cúanto Sinvergüenza Suelto</p>
+						<p class="fragment current-visible">Cascade Style Sheets</p>
+					</article>
+				</section>
+
+				<section>
+					<h2>Lo básico de CSS es !CSS</h2>
+					<table class="fragment" style="width: 100%;">
+						<tr>
+							<td style="text-align: center;">
+								<a href="www.htmlhelp.com/reference/html40/block.html">Block Level elements</a>
+							</td>
+							<td style="text-align: center;">
+								<a href="www.htmlhelp.com/reference/html40/inline.html">Line Level elements</a>
+							</td>
+						</tr>
+					</table>
+					<p class="fragment"><small>(HTML 4 [1997 - 2007])</small></p>
+					<table style="width: 100%;">
+						<tr>
+							<td>
+								<small><ul class="fragment">
+									<li><b class="fragment highlight-red">DIV</b> - Generic block-level container</li>
+									<li><b>ADDRESS</b> - Address</li>
+									<li><b>BLOCKQUOTE</b> - Block quotation</li>
+									<li><b>FORM</b> - Interactive form</li>
+									<li><b>H*</b> - Level-* heading</li>
+									<li><b>HR</b> - Horizontal rule</li>
+									<li><b>OL</b> - Ordered list</li>
+									<li><b>UL</b> - Unordered list</li>
+									<li><b>LI</b> - List item</li>
+									<li><b>P</b> - Paragraph</li>
+									<li><b>PRE</b> - Preformatted text</li>
+									<li><b>TABLE</b> - Table</li>
+									<li><b>TD</b> - Table data cell</li>
+									<li><b>TR</b> - Table row</li>
+									<li>etc.</li>
+								</ul></small>
+							</td>
+							<td>
+								<small><ul class="fragment">
+									<li><b class="fragment highlight-red">SPAN</b> - Generic inline container</li>
+									<li><b>A</b> - Anchor</li>
+									<li><b>ABBR</b> - Abbreviation</li>
+									<li><b>ACRONYM</b> - Acronym</li>
+									<li><b>B</b> - Bold text</li>
+									<li><b>BDO</b> - BiDi override</li>
+									<li><b>TEXTAREA</b> - Multi-line text input</li>
+									<li><b>SMALL</b> - Small text</li>
+									<li><b>SELECT</b> - Option selector</li>
+									<li><b>IMG</b> - Inline image</li>
+									<li><b>BIG</b> - Large text</li>
+									<li><b>BR</b> - Line break</li>
+									<li>etc.</li>
+								</ul></small>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<section>
+						<h2>Cajas/contenedores</h2>
+						<q class="fragment">
+							<small><a href="https://www.w3.org/TR/html51/">
+								HTML 5.1
+							</a>
+							(2016)
+							</small>
+						</q>
+						<h3>El elemento <span style="text-transform: lowercase;">`div`</span></h3>
+						<blockquote class="fragment" cite="https://www.w3.org/wiki/HTML/Elements/div">
+							The <code>&lt;div&gt;</code> element has no special meaning at all.
+						</blockquote>
+						<p class="fragment"><q class="smaller">https://www.w3.org/wiki/HTML/Elements/div</q></p>
+						<p class="fragment"><small>(4.4 Grouping content)</small></p>
+						<h3>El elemento <span style="text-transform: lowercase;">`span`</span></h3>
+						<blockquote class="fragment">
+							The <code>&lt;span&gt;</code> element doesn't mean anything on its own
+						</blockquote>
+						<p class="fragment">
+							<q class="smaller">
+								https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element
+							</q>
+						</p>
+						<p class="fragment"><small>(4.5 Text-level semantics)</small></p>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							Una sucesión de `div`s:
+							```
+							<section>
+							    <div>1</div>
+							    <div>2</div>
+							    <div>3</div>
+							    <div>4</div>
+							</section>
+							```
+							Reultado:
+							> <div>1</div>
+							> <div>2</div>
+							> <div>3</div>
+							> <div>4</div>
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							Una sucesión de `span`s:
+							```
+							<section>
+							    <span>1</span>
+							    <span>2</span>
+							    <span>3</span>
+							    <span>4</span>
+							</section>
+							```
+							Reultado:
+							> <span>1</span>
+							> <span>2</span>
+							> <span>3</span>
+							> <span>4</span>
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<h2>Otro de los pilares de la maquetación</h2>
+					<p>
+						Conocer el modelo de caja
+					</p>
+					<p>
+						<img src="img/box-model.jpg" alt="Chrome y Firefox">
+					</p>
+					<p>
+						<pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+box-sizing: content-box;
+					</code></pre>
+					</p>
+				</section>
+
+				<section>
+					<h2>Hora de mancharse las manos</h2>
+					<iframe src="https://codepen.io/brav0/pen/GmmzxP/left"
+							frameborder="0" height="600px" width="100%"></iframe>
+				</section>
+
+				<section>
+					<h2>Algunas reglas las carga el diablo</h2>
+					<iframe src="http://codepen.io/team/css-tricks/full/970f26f621cfa3ae3eec7e2a6b0e8c97/"
+					frameborder="0" height="600px" width="100%"></iframe>
+				</section>
+
+				<section>
+					<h2>Debuggear CSS</h2>
+					<p>DevTools es tu amigo 🙌</p>
+					<img src="img/dev-tools.jpg" alt="open it up!">
+					<ul>
+						<li>Estilos presentes</li>
+						<li>Todos los estilos computados</li>
+						<li>Usar como IDE</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
