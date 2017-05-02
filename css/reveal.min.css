@@ -14,3 +14,6 @@ html,body,.reveal div,.reveal span,.reveal applet,.reveal object,.reveal iframe,
     color: #F1538;
 }
 
+.reveal .progress {
+    height: 8px;
+}

@@ -13,13 +13,19 @@ var connect = require('gulp-connect');
 var zip = require('gulp-zip');
 
 var banner = ['/*!\n',
-    ' * reveal.js <%= pkg.version %> (<%= now() %>)\n' ,
-    ' * http://lab.hakim.se/reveal-js\n' ,
-    ' * MIT licensed\n' ,
-    ' *\n' ,
-    ' * Copyright (C) 2014 Hakim El Hattab, http://hakim.se\n' ,
+    ' * reveal.js <%= pkg.version %> (<%= now() %>)\n',
+    ' * http://lab.hakim.se/reveal-js\n',
+    ' * MIT licensed\n',
+    ' *\n',
+    ' * Copyright (C) 2014 Hakim El Hattab, http://hakim.se\n',
     ' */',
     '\n'].join('');
+
+var serverConfig = {
+    root: './',
+    livereload: true,
+    port : 8000
+};
 
 gulp.task('qunit', function() {
     return gulp.src('test/*.html')
@@ -30,7 +36,7 @@ gulp.task('uglify', function() {
   gulp.src('js/reveal.js')
     .pipe(uglify())
     .pipe(rename('reveal.min.js'))
-    .pipe(header(banner, { 
+    .pipe(header(banner, {
         pkg : pkg,
         now: function () {
             var d = new Date();
@@ -83,11 +89,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('connect', function() {
-  connect.server({
-    root: './',
-    livereload: true,
-    port : 8000
-  });
+  connect.server(serverConfig);
 });
 
 gulp.task('html', function () {

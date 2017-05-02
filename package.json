@@ -4,8 +4,7 @@
   "description": "Taller CSS",
   "homepage": "https://github.com/gangsthub/layout-or-get-out",
   "scripts": {
-    "test": "grunt test",
-    "start": ""
+    "start": "gulp serve"
   },
   "author": {
     "name": "gangsthub"
@@ -15,10 +14,10 @@
     "url": "git://github.com/gangsthub/layout-or-get-out.git"
   },
   "dependencies": {
-    "underscore": "~1.5.1",
     "express": "~2.5.9",
     "mustache": "~0.7.2",
-    "socket.io": "~0.9.13"
+    "socket.io": "~0.9.13",
+    "underscore": "~1.5.1"
   },
   "devDependencies": {
     "gulp": "^3.7.0",
@@ -33,10 +32,8 @@
     "gulp-watch": "^0.6.5",
     "gulp-zip": "^0.3.4"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/gangsthub/layout-or-get-out/blob/master/LICENSE"
-    }
-  ]
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/gangsthub/layout-or-get-out/blob/master/LICENSE"
+  }
 }

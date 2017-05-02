@@ -1,274 +1,438 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>Taller CSS</title>
+        <title>Taller CSS</title>
 
-		<meta name="description" content="Taller CSS para programadores">
-		<meta name="author" content="Paul Melero">
+        <meta name="description" content="Taller CSS para programadores">
+        <meta name="author" content="Paul Melero">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Sesión de maquetación HTML5-CSS3</h2>
-					<h5>HTML ❤ CSS</h5>
-					<hr>
-					<p>
-						Paul Melero
-					</p>
-					<br>
-					<p><small>
-						<svg viewBox="0 0 300.00006 244.18703" width="36" version="1.1"
-							 preserveAspectRatio="xMinYMin">
-							<g style="" transform="translate(-539.18 -568.86)">
-								<path d="m633.9 812.04c112.46 0 173.96-93.168 173.96-173.96 0-2.6463-0.0539-5.2806-0.1726-7.903 11.938-8.6302 22.314-19.4 30.498-31.66-10.955 4.8694-22.744 8.1474-35.111 9.6255 12.623-7.5693 22.314-19.543 26.886-33.817-11.813 7.0031-24.895 12.093-38.824 14.841-11.157-11.884-27.041-19.317-44.629-19.317-33.764 0-61.144 27.381-61.144 61.132 0 4.7978 0.5364 9.4646 1.5854 13.941-50.815-2.5569-95.874-26.886-126.03-63.88-5.2508 9.0354-8.2785 19.531-8.2785 30.73 0 21.212 10.794 39.938 27.208 50.893-10.031-0.30992-19.454-3.0635-27.69-7.6468-0.009 0.25652-0.009 0.50661-0.009 0.78077 0 29.61 21.075 54.332 49.051 59.934-5.1376 1.4006-10.543 2.1516-16.122 2.1516-3.9336 0-7.766-0.38716-11.491-1.1026 7.7838 24.293 30.355 41.971 57.115 42.465-20.926 16.402-47.287 26.171-75.937 26.171-4.929 0-9.7983-0.28036-14.584-0.84634 27.059 17.344 59.189 27.464 93.722 27.464" fill="#657b83"/>
-							</g>
-						</svg>
-						&nbsp;
-						<a href="http://twitter.com/pollobrav0">@pollobrav0</a>
-					</small></p>
-					<p><small>
-						<svg viewBox="0 0 16 16" width="36" preserveAspectRatio="xMinYMin" version="1.1">
-							<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-						</svg>
-						&nbsp;
-						<a href="https://github.com/gangsthub/layout-or-get-out">https://github.com/gangsthub/layout-or-get-out</a>
-					</small></p>
-				</section>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Sesión de maquetación HTML5 ❤ CSS3</h2>
+                    <h6><em>'AKA', Pregúntale a tu colega que sabe de CSS todo lo que no te atrevías a preguntar</em></h6>
+                    <hr>
+                    <p>
+                        Paul Melero
+                    </p>
+                    <br>
+                    <p><small>
+                        <svg fill="#657b83" viewBox="0 0 300 244" width="24" version="1.1"
+                             preserveAspectRatio="xMinYMin">
+                            <g transform="translate(-539.18 -568.86)">
+                                <path d="m633.9 812.04c112.46 0 173.96-93.168 173.96-173.96 0-2.6463-0.0539-5.2806-0.1726-7.903 11.938-8.6302 22.314-19.4 30.498-31.66-10.955 4.8694-22.744 8.1474-35.111 9.6255 12.623-7.5693 22.314-19.543 26.886-33.817-11.813 7.0031-24.895 12.093-38.824 14.841-11.157-11.884-27.041-19.317-44.629-19.317-33.764 0-61.144 27.381-61.144 61.132 0 4.7978 0.5364 9.4646 1.5854 13.941-50.815-2.5569-95.874-26.886-126.03-63.88-5.2508 9.0354-8.2785 19.531-8.2785 30.73 0 21.212 10.794 39.938 27.208 50.893-10.031-0.30992-19.454-3.0635-27.69-7.6468-0.009 0.25652-0.009 0.50661-0.009 0.78077 0 29.61 21.075 54.332 49.051 59.934-5.1376 1.4006-10.543 2.1516-16.122 2.1516-3.9336 0-7.766-0.38716-11.491-1.1026 7.7838 24.293 30.355 41.971 57.115 42.465-20.926 16.402-47.287 26.171-75.937 26.171-4.929 0-9.7983-0.28036-14.584-0.84634 27.059 17.344 59.189 27.464 93.722 27.464z" fill="#657b83"/>
+                            </g>
+                        </svg>
+                        &nbsp;
+                        <a href="http://twitter.com/pollobrav0">@pollobrav0</a>
+                    </small></p>
+                    <p><small>
+                        <svg fill="#657b83" viewBox="-50 57 300.00006 244.18703" width="56" version="1.1"
+                             preserveAspectRatio="xMinYMin" >
+                            <rect x="128.5" y="127.3" transform="matrix(0.9482 -0.3176 0.3176 0.9482 -36.0197 50.6366)" width="17.6" height="17" />
+                            <path d="M194.6,118.5c-12.9-43-31.5-53-74.5-40.1s-53,31.5-40.1,74.5s31.5,53,74.5,40.1S207.5,161.5,194.6,118.5z
+                             M172.9,146.4l-8.1,2.7l2.8,8.4c1.1,3.4-0.7,7.1-4.1,8.2c-0.7,0.2-1.5,0.4-2.2,0.3c-2.6-0.1-5.1-1.8-6-4.4l-2.8-8.4l-16.7,5.6
+                            l2.8,8.4c1.1,3.4-0.7,7.1-4.1,8.2c-0.7,0.2-1.5,0.4-2.2,0.3c-2.6-0.1-5.1-1.8-6-4.4l-2.8-8.4l-8.1,2.7c-0.7,0.2-1.5,0.4-2.2,0.3
+                            c-2.6-0.1-5.1-1.8-6-4.4c-1.1-3.4,0.7-7.1,4.1-8.2l8.1-2.7l-5.4-16.1l-8.1,2.7c-0.7,0.2-1.5,0.4-2.2,0.3c-2.6-0.1-5.1-1.8-6-4.4
+                            c-1.1-3.4,0.7-7.1,4.1-8.2l8.1-2.7l-2.8-8.4c-1.1-3.4,0.7-7.1,4.1-8.2s7.1,0.7,8.2,4.1l2.8,8.4l16.7-5.6l-2.8-8.4
+                            c-1.1-3.4,0.7-7.1,4.1-8.2c3.4-1.1,7.1,0.7,8.2,4.1l2.8,8.4l8.1-2.7c3.4-1.1,7.1,0.7,8.2,4.1c1.1,3.4-0.7,7.1-4.1,8.2l-8.1,2.7
+                            l5.4,16.1l8.1-2.7c3.4-1.1,7.1,0.7,8.2,4.1C178.1,141.6,176.3,145.3,172.9,146.4z" />
+                    </svg>
+                        <a>/psmelero</a>
+                    </small></p>
+                    <p><small>
+                        <svg fill="#657b83" viewBox="0 0 20 20" width="36" preserveAspectRatio="xMinYMin" version="1.1">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        &nbsp;
+                        <a href="https://github.com/gangsthub/layout-or-get-out">https://github.com/gangsthub/layout-or-get-out</a>
+                    </small></p>
+                    <aside class="notes">
+                        <ul>
+                            <li>tema de preguntas: q me corten en cualquier momento...</li>
+                            <li>Lo siguiente: no enseñaros a usar CSS en una hora, sino ensearos los conceptos
+                        clave. Pero sí que quería introducir una cosilla básica</li>
+                        </ul>
+                    </aside>
+                </section>
 
-				<section>
-					<h2>CSS</h2>
-					<article>
-						<p class="fragment current-visible">Cúanto Sinvergüenza Suelto</p>
-						<p class="fragment current-visible">Cascade Style Sheets</p>
-					</article>
-				</section>
+                <section>
+                    <h2>CSS</h2>
+                    <article>
+                        <p class="fragment current-visible">Cúanto Sinvergüenza Suelto</p>
+                        <p class="fragment current-visible">Cascade Style Sheets</p>
+                    </article>
+                </section>
 
-				<section>
-					<h2>Lo básico de CSS es !CSS</h2>
-					<table class="fragment" style="width: 100%;">
-						<tr>
-							<td style="text-align: center;">
-								<a href="www.htmlhelp.com/reference/html40/block.html">Block Level elements</a>
-							</td>
-							<td style="text-align: center;">
-								<a href="www.htmlhelp.com/reference/html40/inline.html">Line Level elements</a>
-							</td>
-						</tr>
-					</table>
-					<p class="fragment"><small>(HTML 4 [1997 - 2007])</small></p>
-					<table style="width: 100%;">
-						<tr>
-							<td>
-								<small><ul class="fragment">
-									<li><b class="fragment highlight-red">DIV</b> - Generic block-level container</li>
-									<li><b>ADDRESS</b> - Address</li>
-									<li><b>BLOCKQUOTE</b> - Block quotation</li>
-									<li><b>FORM</b> - Interactive form</li>
-									<li><b>H*</b> - Level-* heading</li>
-									<li><b>HR</b> - Horizontal rule</li>
-									<li><b>OL</b> - Ordered list</li>
-									<li><b>UL</b> - Unordered list</li>
-									<li><b>LI</b> - List item</li>
-									<li><b>P</b> - Paragraph</li>
-									<li><b>PRE</b> - Preformatted text</li>
-									<li><b>TABLE</b> - Table</li>
-									<li><b>TD</b> - Table data cell</li>
-									<li><b>TR</b> - Table row</li>
-									<li>etc.</li>
-								</ul></small>
-							</td>
-							<td>
-								<small><ul class="fragment">
-									<li><b class="fragment highlight-red">SPAN</b> - Generic inline container</li>
-									<li><b>A</b> - Anchor</li>
-									<li><b>ABBR</b> - Abbreviation</li>
-									<li><b>ACRONYM</b> - Acronym</li>
-									<li><b>B</b> - Bold text</li>
-									<li><b>BDO</b> - BiDi override</li>
-									<li><b>TEXTAREA</b> - Multi-line text input</li>
-									<li><b>SMALL</b> - Small text</li>
-									<li><b>SELECT</b> - Option selector</li>
-									<li><b>IMG</b> - Inline image</li>
-									<li><b>BIG</b> - Large text</li>
-									<li><b>BR</b> - Line break</li>
-									<li>etc.</li>
-								</ul></small>
-							</td>
-						</tr>
-					</table>
-				</section>
+                <section>
+                    <h2>Lo básico de CSS es !CSS</h2>
+                    <table class="fragment" style="width: 100%;">
+                        <tr>
+                            <td style="text-align: center;">
+                                <a href="www.htmlhelp.com/reference/html40/block.html">Block Level elements</a>
+                            </td>
+                            <td style="text-align: center;">
+                                <a href="www.htmlhelp.com/reference/html40/inline.html">Line Level elements</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="fragment"><small>(HTML 4 [1997 - 2007])</small></p>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <small><ul class="fragment">
+                                    <li><b class="fragment highlight-red">DIV</b> - Generic block-level container</li>
+                                    <li><b>ADDRESS</b> - Address</li>
+                                    <li><b>BLOCKQUOTE</b> - Block quotation</li>
+                                    <li><b>FORM</b> - Interactive form</li>
+                                    <li><b>H*</b> - Level-* heading</li>
+                                    <li><b>HR</b> - Horizontal rule</li>
+                                    <li><b>OL</b> - Ordered list</li>
+                                    <li><b>UL</b> - Unordered list</li>
+                                    <li><b>LI</b> - List item</li>
+                                    <li><b>P</b> - Paragraph</li>
+                                    <li><b>PRE</b> - Preformatted text</li>
+                                    <li><b>TABLE</b> - Table</li>
+                                    <li><b>TD</b> - Table data cell</li>
+                                    <li><b>TR</b> - Table row</li>
+                                    <li>etc.</li>
+                                </ul></small>
+                            </td>
+                            <td>
+                                <small><ul class="fragment">
+                                    <li><b class="fragment highlight-red">SPAN</b> - Generic inline container</li>
+                                    <li><b>A</b> - Anchor</li>
+                                    <li><b>ABBR</b> - Abbreviation</li>
+                                    <li><b>ACRONYM</b> - Acronym</li>
+                                    <li><b>B</b> - Bold text</li>
+                                    <li><b>BDO</b> - BiDi override</li>
+                                    <li><b>TEXTAREA</b> - Multi-line text input</li>
+                                    <li><b>SMALL</b> - Small text</li>
+                                    <li><b>SELECT</b> - Option selector</li>
+                                    <li><b>IMG</b> - Inline image</li>
+                                    <li><b>BIG</b> - Large text</li>
+                                    <li><b>BR</b> - Line break</li>
+                                    <li>etc.</li>
+                                    <li class="red">Pseudo elementos</li>
+                                </ul></small>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
 
-				<section>
-					<section>
-						<h2>Cajas/contenedores</h2>
-						<q class="fragment">
-							<small><a href="https://www.w3.org/TR/html51/">
-								HTML 5.1
-							</a>
-							(2016)
-							</small>
-						</q>
-						<h3>El elemento <span style="text-transform: lowercase;">`div`</span></h3>
-						<blockquote class="fragment" cite="https://www.w3.org/wiki/HTML/Elements/div">
-							The <code>&lt;div&gt;</code> element has no special meaning at all.
-						</blockquote>
-						<p class="fragment"><q class="smaller">https://www.w3.org/wiki/HTML/Elements/div</q></p>
-						<p class="fragment"><small>(4.4 Grouping content)</small></p>
-						<h3>El elemento <span style="text-transform: lowercase;">`span`</span></h3>
-						<blockquote class="fragment">
-							The <code>&lt;span&gt;</code> element doesn't mean anything on its own
-						</blockquote>
-						<p class="fragment">
-							<q class="smaller">
-								https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element
-							</q>
-						</p>
-						<p class="fragment"><small>(4.5 Text-level semantics)</small></p>
-					</section>
-					<section data-markdown>
-						<script type="text/template">
-							Una sucesión de `div`s:
-							```
-							<section>
-							    <div>1</div>
-							    <div>2</div>
-							    <div>3</div>
-							    <div>4</div>
-							</section>
-							```
-							Reultado:
-							> <div>1</div>
-							> <div>2</div>
-							> <div>3</div>
-							> <div>4</div>
-						</script>
-					</section>
+                <section>
+                    <section>
+                        <h2>Cajas/contenedores</h2>
+                        <q class="fragment">
+                            <small><a href="https://www.w3.org/TR/html51/">
+                                HTML 5.1
+                            </a>
+                            (2016)
+                            </small>
+                        </q>
+                        <h3>El elemento <span style="text-transform: lowercase;">`div`</span></h3>
+                        <blockquote class="fragment" cite="https://www.w3.org/wiki/HTML/Elements/div">
+                            The <code>&lt;div&gt;</code> element has no special meaning at all.
+                        </blockquote>
+                        <p class="fragment"><q class="smaller">https://www.w3.org/wiki/HTML/Elements/div</q></p>
+                        <p class="fragment"><small>(4.4 Grouping content)</small></p>
+                        <h3>El elemento <span style="text-transform: lowercase;">`span`</span></h3>
+                        <blockquote class="fragment">
+                            The <code>&lt;span&gt;</code> element doesn't mean anything on its own
+                        </blockquote>
+                        <p class="fragment">
+                            <q class="smaller">
+                                https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element
+                            </q>
+                        </p>
+                        <p class="fragment"><small>(4.5 Text-level semantics)</small></p>
+                    </section>
 
-					<section data-markdown>
-						<script type="text/template">
-							Una sucesión de `span`s:
-							```
-							<section>
-							    <span>1</span>
-							    <span>2</span>
-							    <span>3</span>
-							    <span>4</span>
-							</section>
-							```
-							Reultado:
-							> <span>1</span>
-							> <span>2</span>
-							> <span>3</span>
-							> <span>4</span>
-						</script>
-					</section>
-				</section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            Una sucesión de `div`s:
+                            ```
+                            <section>
+                                <div>item</div>
+                                <div>item</div>
+                                <div>item</div>
+                                <div>item</div>
+                            </section>
+                            ```
+                            Reultado:
+                            > <div>item</div>
+                            > <div>item</div>
+                            > <div>item</div>
+                            > <div>item</div>
+                        </script>
+                    </section>
 
-				<section>
-					<h2>Otro de los pilares de la maquetación</h2>
-					<p>
-						Conocer el modelo de caja
-					</p>
-					<p>
-						<img src="img/box-model.jpg" alt="Chrome y Firefox">
-					</p>
-					<p>
-						<pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-box-sizing: content-box;
-					</code></pre>
-					</p>
-				</section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            Una sucesión de `span`s:
+                            ```
+                            <section>
+                                <span>item</span>
+                                <span>item</span>
+                                <span>item</span>
+                                <span>item</span>
+                            </section>
+                            ```
+                            Reultado:
+                            > <span>item</span>
+                            > <span>item</span>
+                            > <span>item</span>
+                            > <span>item</span>
+                        </script>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Hora de mancharse las manos</h2>
-					<iframe src="https://codepen.io/brav0/pen/GmmzxP/left"
-							frameborder="0" height="600px" width="100%"></iframe>
-				</section>
+                <section>
+                    <h2>Otro de los pilares de la maquetación</h2>
+                    <p>
+                        Conocer el modelo de caja
+                    </p>
+                    <p>
+                        <img src="img/box-model.jpg" alt="Chrome y Firefox">
+                    </p>
+                    <p class="fragment">
+                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+box-sizing: content-box;</code></pre>
+                    <aside class="notes">box-sizing: content-box;</aside>
+                    </p>
+                </section>
 
-				<section>
-					<h2>Algunas reglas las carga el diablo</h2>
-					<iframe src="http://codepen.io/team/css-tricks/full/970f26f621cfa3ae3eec7e2a6b0e8c97/"
-					frameborder="0" height="600px" width="100%"></iframe>
-				</section>
+                <section>
+                    <h2>Hora de mancharse las manos</h2>
+                    <iframe src="https://codepen.io/brav0/full/GmmzxP?editors=1100"
+                            frameborder="0" height="600px" width="100%"></iframe>
+                </section>
 
-				<section>
-					<h2>Debuggear CSS</h2>
-					<p>DevTools es tu amigo 🙌</p>
-					<img src="img/dev-tools.jpg" alt="open it up!">
-					<ul>
-						<li>Estilos presentes</li>
-						<li>Todos los estilos computados</li>
-						<li>Usar como IDE</li>
-					</ul>
-				</section>
+                <section>
+                    <h2>Algunas reglas las carga el diablo</h2>
+                    <iframe src="https://codepen.io/team/css-tricks/full/970f26f621cfa3ae3eec7e2a6b0e8c97/"
+                    frameborder="0" height="600px" width="100%"></iframe>
+                </section>
 
-			</div>
+                <section>
+                    <h2>Recapitulando conceptos</h2>
+                    <br>
+                    <ol>
+                        <li class="fragment"><em>Block level</em> + <em>inline level</em></li>
+                        <br>
+                        <li class="fragment">Modelo de caja (+ <code>border-box</code>)</li>
+                    </ol>
+                </section>
 
-		</div>
+                <section>
+                    <h2>💪 Debuggear CSS 💪</h2>
+                    <p><em>DevTools</em> es tu amigo 🙌</p>
+                    <!-- Inception -->
+                    <img src="img/dev-tools.jpg" title="debug me">
+                    <ul>
+                        <li>Estilos aplicados y herencia</li>
+                        <li>Todos los estilos computados (incluyendo los del navegador)</li>
+                        <li>Usar como IDE</li>
+                    </ul>
+                    <aside class="notes">
+                        Caso de debuggeo de la imagen y sus 4 pixeles de borde...
+                    </aside>
+                </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+                <section>
+                    <h2>Metodología: debuggear la herencia:</h2>
+                    <ol>
+                        <li>Escalar en los estilos aplicados</li>
+                        <li>Escalar en los computados</li>
+                        <li>Si no está ahí, depende de una herencia aplicada <em>en linea</em></li>
+                    </ol>
+                    <br><br>
+                    <ol class="fragment">
+                        <li>Ver en qué <b>archivo</b> se encuentra y editarlo si corresponde</li>
+                    </ol>
+                </section>
 
-		<script>
+                <section>
+                    <h2>Algo importante a tener en cuenta</h2>
+                    <p>La <b>herencia</b> de CSS no tiene nada que ver con la herencia de <em>OOP</em>.</p>
+                    <pre><code data-trim contenteditable>
+<div class="foo">
+    <p class="bar">
+      Hello, world.
+    </p>
+</div>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+<style>
+.foo {
+    background-color: white;
+    color: red;
+}
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+.bar {
+    /* 1.- No se hace así
+    reference to .foo */
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+    /* 2.- se hace así
+    background-color: inherit;
+    color: inherit */
+    font-weight: normal;
+}
+</style>
 
-		</script>
+                    </code></pre>
+                    <p class="fragment">
+                        <a href="https://www.w3.org/TR/CSS21/propidx.html">Lista de elementos que heredan</a>
+                    </p>
+                    <aside class="notes">
+                        herencia de font-size: ejemplos:
+                        <ul>
+                            <li>bootstrap, 14px</li>
+                            <li>em, rem</li>
+                        </ul>
+                    </aside>
+                </section>
 
-	</body>
+                <section>
+                    <h2>OOP en CSS y el <em>Global scope</em></h2>
+                    <p>Por defecto, los estilos tienen un alcance global.</p>
+                    <pre class="fragment"><code>
+<button class="button red"></button>
+<button class="button red blue"></button>
+                    </code></pre>
+                    <p class="fragment">Pregunta trampa</p>
+                    <ul class="fragment">
+                        <li>Todo mi css está en el mismo archivo</li>
+                        <li><b>No</b> está en el mismo archivo: carga de archivos de css</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Convenciones de <em>naming</em></h2>
+                    <ul>
+                        <li><a href="http://getbem.com/naming/">BEM</a></li>
+                        <li>
+                            <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>,
+                            del que se originó el<em>
+                            <a href="https://www.smashingmagazine.com/2013/08/other-interface-atomic-design-sass/">
+                            Atomic Design</a></em>
+                        </li>
+                        <li><a href="https://smacss.com/">SMACSS</a></li>
+                        <li>
+                            <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528">
+                                ITCSS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://suitcss.github.io/"
+                                title="[<namespace>-]<ComponentName>[-descendentName][--modifierName]">SUITCSS</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>HTML semántico</h2>
+                    <h3>Cómo nombres a las clases depende de la convención que se elija</h3>
+                    <p class="fragment">Tantas convenciones como Frameworks de JS!</p>
+                    <p class="fragment">Son arbitrarias. El HTML, no.</p>
+                    <div style="position: relative">
+                        <pre style="position: absolute; top: 0; left: 50%; transform: translateX(-50%)"
+                             class="fragment fade-out"><code>
+<div class="list">
+    <span class="block">texto</span>
+    <span class="block">texto</span>
+    <span class="block">texto</span>
+</div>
+                    </code></pre>
+                    <pre style="position: absolute; top: 0; left: 50%; transform: translateX(-50%)"
+                         class="fragment current-visible"><code>
+<!-- SuitCSS -->
+<ul class="myBlock-list">
+    <li class="c-list-item">texto</li>
+    <li class="c-list-item">texto</li>
+    <li class="c-list-item">texto</li>
+</ul>
+                    </code></pre>
+                    <pre style="position: absolute; top: 0; left: 50%; transform: translateX(-50%)"
+                         class="fragment current-visible"><code>
+<!--
+ARIA: https://www.w3.org/TR/wai-aria/roles#listitem -->
+<div role="list" class="my-awesome-list">
+    <span role="listitem" class="block">texto</span>
+    <span role="listitem" class="block">texto</span>
+    <span role="listitem" class="block">texto</span>
+</div>
+                    </code></pre>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
 </html>
