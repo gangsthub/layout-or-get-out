@@ -1,0 +1,48 @@
+
+i[aria-hidden] {
+    font-style: normal;
+}
+
+.reveal .smaller {
+    font-size: 0.4em;
+}
+
+.reveal .red {
+    color: #F1538B;
+}
+
+.reveal .progress {
+    height: 8px;
+}
+
+.reveal dl {
+    display: block;
+    box-sizing: border-box;
+}
+
+.reveal dt {
+    box-sizing: border-box;
+    font-size: .8em;
+    float: left;
+    width: 60%;
+    font-weight: bold;
+    padding-right: 5%;
+    text-align: right;
+}
+
+.reveal dd {
+    box-sizing: border-box;
+    font-size: .6em;
+    width: 40%;
+    float: left;
+    font-style: italic;
+    text-align: left;
+}
+
+.reveal .relative {
+    position: relative;
+}
+
+.reveal .absolute-center {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%)
+}
