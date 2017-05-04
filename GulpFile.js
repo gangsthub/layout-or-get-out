@@ -25,7 +25,9 @@ var paths = {
         'img/*.png'
     ],
     js: [
-        'js/reveal.min.js'
+        'js/reveal.min.js',
+        'lib/js/head.min.js',
+        'lib/js/html5shiv.js'
     ],
     html: 'index.html',
 };
@@ -127,31 +129,6 @@ gulp.task('zip', function () {
         .pipe(zip('reveal-js-presentation.zip'))
         .pipe(gulp.dest('./'));
 });
-
-gulp.task('build', ['move-css', 'move-imgs', 'move-js', 'move-html'],  function(done) {
-    done();
-});
-
-gulp.task('move-css', function (done) {
-    return gulp.src(paths.css)
-                .pipe(gulp.dest(paths.docs + '/css'));
-})
-
-gulp.task('move-imgs', function (done) {
-    return gulp.src(paths.imgs)
-                .pipe(gulp.dest(paths.docs + '/img'));
-})
-
-gulp.task('move-js', function (done) {
-    return gulp.src(paths.js)
-                .pipe(gulp.dest(paths.docs + '/js'));
-})
-
-gulp.task('move-html', function (done) {
-    return gulp.src(paths.html)
-                .pipe(gulp.dest(paths.docs + '/'));
-})
-
 
 gulp.task('watch', function () {
   gulp.watch([ 'gulpFile.js', 'js/reveal.js', 'css/reveal.css' ], ['themes','html']);
