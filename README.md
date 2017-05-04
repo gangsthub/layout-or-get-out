@@ -2,7 +2,7 @@
 
 > [ONLY SPANISH]
 
-###URL:
+### URL:
 https://gangsthub.github.io/layout-or-get-out/
 
 ## Taller CSS
