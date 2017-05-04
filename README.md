@@ -1,4 +1,4 @@
-# Layout or get -TF- out
+# Layout or get out :P
 
 > [ONLY SPANISH]
 
