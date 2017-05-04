@@ -2,7 +2,7 @@
   "name": "layout-or-get-out",
   "version": "1.0.0",
   "description": "Taller CSS",
-  "homepage": "https://github.com/gangsthub/layout-or-get-out",
+  "homepage": "https://gangsthub.github.io/layout-or-get-out/",
   "scripts": {
     "start": "gulp serve"
   },
