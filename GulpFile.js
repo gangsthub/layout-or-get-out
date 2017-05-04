@@ -16,9 +16,9 @@ var paths = {
     docs: './docs',
     css: [
         'css/reveal.min.css',
-        'css/theme/solarized.css',
+        'css/**/solarized.css',
         'lib/css/zenburn.css',
-        'css/print/pdf.css'
+        'css/**/pdf.css'
     ],
     imgs: [
         'img/*.jpg',
