@@ -12,6 +12,24 @@ var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
 var zip = require('gulp-zip');
 
+var paths = {
+    docs: './docs',
+    css: [
+        'css/reveal.min.css',
+        'css/theme/solarized.css',
+        'lib/css/zenburn.css',
+        'css/print/pdf.css'
+    ],
+    imgs: [
+        'img/*.jpg',
+        'img/*.png'
+    ],
+    js: [
+        'js/reveal.min.js'
+    ],
+    html: 'index.html',
+};
+
 var banner = ['/*!\n',
     ' * reveal.js <%= pkg.version %> (<%= now() %>)\n',
     ' * http://lab.hakim.se/reveal-js\n',
@@ -109,6 +127,31 @@ gulp.task('zip', function () {
         .pipe(zip('reveal-js-presentation.zip'))
         .pipe(gulp.dest('./'));
 });
+
+gulp.task('build', ['move-css', 'move-imgs', 'move-js', 'move-html'],  function(done) {
+    done();
+});
+
+gulp.task('move-css', function (done) {
+    return gulp.src(paths.css)
+                .pipe(gulp.dest(paths.docs + '/css'));
+})
+
+gulp.task('move-imgs', function (done) {
+    return gulp.src(paths.imgs)
+                .pipe(gulp.dest(paths.docs + '/img'));
+})
+
+gulp.task('move-js', function (done) {
+    return gulp.src(paths.js)
+                .pipe(gulp.dest(paths.docs + '/js'));
+})
+
+gulp.task('move-html', function (done) {
+    return gulp.src(paths.html)
+                .pipe(gulp.dest(paths.docs + '/'));
+})
+
 
 gulp.task('watch', function () {
   gulp.watch([ 'gulpFile.js', 'js/reveal.js', 'css/reveal.css' ], ['themes','html']);
