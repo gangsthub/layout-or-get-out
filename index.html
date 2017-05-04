@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Taller CSS</title>
+        <title>BeyonCSS</title>
 
         <meta name="description" content="Taller CSS para programadores">
         <meta name="author" content="Paul Melero">
@@ -40,8 +40,8 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h2>Sesión de maquetación HTML5 ❤ CSS3</h2>
-                    <h6><em>'AKA', Pregúntale a tu colega que sabe de CSS todo lo que no te atrevías a preguntar</em></h6>
+                    <h2>Sesión de maquetación HTML5 CSS3</h2>
+                    <h6><em>BeyonCSS</em> 😂</h6>
                     <hr>
                     <p>
                         Paul Melero
@@ -57,7 +57,7 @@
                         &nbsp;
                         <a href="http://twitter.com/pollobrav0">@pollobrav0</a>
                     </small></p>
-                    <p><small>
+                    <p class="internal"><small>
                         <svg fill="#657b83" viewBox="-50 57 300.00006 244.18703" width="56" version="1.1"
                              preserveAspectRatio="xMinYMin" >
                             <rect x="128.5" y="127.3" transform="matrix(0.9482 -0.3176 0.3176 0.9482 -36.0197 50.6366)" width="17.6" height="17" />
@@ -81,7 +81,7 @@
                     <aside class="notes">
                         <ul>
                             <li>tema de preguntas: q me corten en cualquier momento...</li>
-                            <li>Lo siguiente: no enseñaros a usar CSS en una hora, sino ensearos los conceptos
+                            <li>Lo siguiente: no enseñaros a usar CSS en una hora, sino enseñaros los conceptos
                         clave. Pero sí que quería introducir una cosilla básica</li>
                         </ul>
                     </aside>
@@ -89,9 +89,9 @@
 
                 <section>
                     <h2>CSS</h2>
-                    <article>
-                        <p class="fragment current-visible">Cúanto Sinvergüenza Suelto</p>
-                        <p class="fragment current-visible">Cascade Style Sheets</p>
+                    <article class="relative">
+                        <p class="fragment current-visible absolute-center">Cúanto Sinvergüenza Suelto</p>
+                        <p class="fragment current-visible absolute-center">Cascade Style Sheets</p>
                     </article>
                 </section>
 
@@ -144,7 +144,7 @@
                                     <li><b>BIG</b> - Large text</li>
                                     <li><b>BR</b> - Line break</li>
                                     <li>etc.</li>
-                                    <li class="red">Pseudo elementos</li>
+                                    <li class="red"><em>Pseudo elementos</em></li>
                                 </ul></small>
                             </td>
                         </tr>
@@ -153,14 +153,11 @@
 
                 <section>
                     <section>
-                        <h2>Cajas/contenedores</h2>
+                        <h2>Cajas/contenedores (estilos gratis)</h2>
                         <q class="fragment">
-                            <small><a href="https://www.w3.org/TR/html51/">
-                                HTML 5.1
-                            </a>
-                            (2016)
-                            </small>
+                            <small><a href="https://www.w3.org/TR/html51/">HTML 5.1</a>(2016)</small>
                         </q>
+
                         <h3>El elemento <span style="text-transform: lowercase;">`div`</span></h3>
                         <blockquote class="fragment" cite="https://www.w3.org/wiki/HTML/Elements/div">
                             The <code>&lt;div&gt;</code> element has no special meaning at all.
@@ -177,6 +174,9 @@
                             </q>
                         </p>
                         <p class="fragment"><small>(4.5 Text-level semantics)</small></p>
+                        <aside class="notes">
+                        a:not([href])
+                    </aside>
                     </section>
 
                     <section data-markdown>
@@ -226,11 +226,17 @@
                     <p>
                         <img src="img/box-model.jpg" alt="Chrome y Firefox">
                     </p>
-                    <p class="fragment">
-                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-box-sizing: content-box;</code></pre>
-                    <aside class="notes">box-sizing: content-box;</aside>
-                    </p>
+                    <pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+                            box-sizing: content-box;
+                        </code></pre>
+                    <pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+                            padding: 0;
+border: 0;
+                        </code></pre>
+                    <aside class="notes">
+                        - box-sizing: content-box;
+                        - shorthands considerados anti-patrón
+                    </aside>
                 </section>
 
                 <section>
@@ -260,40 +266,45 @@ box-sizing: content-box;</code></pre>
                     <p><em>DevTools</em> es tu amigo 🙌</p>
                     <!-- Inception -->
                     <img src="img/dev-tools.jpg" title="debug me">
-                    <ul>
-                        <li>Estilos aplicados y herencia</li>
-                        <li>Todos los estilos computados (incluyendo los del navegador)</li>
-                        <li>Usar como IDE</li>
-                    </ul>
+                    <dl>
+                        <dt>1- Estilos aplicados y herencia</dt>
+                        <dd>Pestaña estilos (Árbol invertido)</dd>
+                        <dt>2- Todos los estilos computados</dt>
+                        <dd>Pestaña computados</dd>
+                        <dt>3- Usar como <em>IDE</em></dt>
+                        <dd>Pestaña <em>sources</em> + añadir al <em>workspace</em></dd>
+                    </dl>
                     <aside class="notes">
-                        Caso de debuggeo de la imagen y sus 4 pixeles de borde...
+                        - Caso de debuggeo de la imagen de esta diapo y sus 4 pixeles de borde...
+                        - IDE: Caso de diff de Chrome (desde v58)
                     </aside>
                 </section>
 
                 <section>
                     <h2>Metodología: debuggear la herencia:</h2>
                     <ol>
-                        <li>Escalar en los estilos aplicados</li>
-                        <li>Escalar en los computados</li>
-                        <li>Si no está ahí, depende de una herencia aplicada <em>en linea</em></li>
+                        <li>Escalar en los estilos aplicados 🐒</li>
+                        <li>Escalar en los computados 🐒</li>
+                        <li>Si no está ahí, depende de una herencia aplicada <em>en línea</em> 🙈</li>
                     </ol>
                     <br><br>
-                    <ol class="fragment">
-                        <li>Ver en qué <b>archivo</b> se encuentra y editarlo si corresponde</li>
-                    </ol>
+                    <ul class="fragment">
+                        <li>Ver en qué <b>archivo</b> se encuentra y editarlo <b>(si corresponde)</b></li>
+                    </ul>
                 </section>
 
                 <section>
                     <h2>Algo importante a tener en cuenta</h2>
                     <p>La <b>herencia</b> de CSS no tiene nada que ver con la herencia de <em>OOP</em>.</p>
                     <pre><code data-trim contenteditable>
+<!-- HTML -->
 <div class="foo">
     <p class="bar">
-      Hello, world.
+      Hello world!
     </p>
 </div>
 
-
+<!-- Estilos -->
 <style>
 .foo {
     background-color: white;
@@ -306,14 +317,14 @@ box-sizing: content-box;</code></pre>
 
     /* 2.- se hace así
     background-color: inherit;
-    color: inherit */
+    color: inherit; */
+    font-size: initial;
     font-weight: normal;
 }
 </style>
-
                     </code></pre>
                     <p class="fragment">
-                        <a href="https://www.w3.org/TR/CSS21/propidx.html">Lista de elementos que heredan</a>
+                        <a href="https://www.w3.org/TR/CSS21/propidx.html">Lista de elementos que heredan en CSS2</a>
                     </p>
                     <aside class="notes">
                         herencia de font-size: ejemplos:
@@ -325,21 +336,134 @@ box-sizing: content-box;</code></pre>
                 </section>
 
                 <section>
-                    <h2>OOP en CSS y el <em>Global scope</em></h2>
+                    <h2><em>Global scope</em> y cascada</h2>
                     <p>Por defecto, los estilos tienen un alcance global.</p>
                     <pre class="fragment"><code>
 <button class="button red"></button>
 <button class="button red blue"></button>
                     </code></pre>
-                    <p class="fragment">Pregunta trampa</p>
-                    <ul class="fragment">
-                        <li>Todo mi css está en el mismo archivo</li>
-                        <li><b>No</b> está en el mismo archivo: carga de archivos de css</li>
+                    <p class="fragment">Pregunta trampa: ¿De qué color se pinta?</p>
+                    <ol class="fragment">
+                        <li>Cascada de un solo archivo</li>
+                        <li>
+                            <b>No</b> está en el mismo archivo: carga de archivos de css. Depende del orden de
+                            declaración
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/css3-cascade/#cascade-scope"><em>Scope</em>
+                            </a> por elemento: especificidad
+                        </li>
+                    </ol>
+                    <aside class="notes">Scope por elemento:
+                           <a href="https://www.w3.org/TR/css3-cascade/#cascade-scope">enlace</a></aside>
+                </section>
+
+                <section>
+                    <h2>UA CSS</h2>
+                        <p>
+                        Caso especial: Es lo que primero computa en la cascada en un UA (navegador):
+                        <a href="http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css"
+                           title="#L929">UA CSS</a>
+                        </p>
+                        <img src="img/webkit-UA.png" title="Chromeium UA CSS">
+                        <aside class="notes">
+                            https://meiert.com/en/blog/20070922/user-agent-style-sheets/
+                        </aside>
+                </section>
+
+                <section>
+                    <img src="img/C23HS.jpg" title="UA CSS en los estilos presentes">
+                </section>
+
+                <section>
+                    <h2><em>FFI</em></h2>
+                    <a href="https://www.w3.org/TR/css3-cascade/">Concepto de cascada</a>
+                    <p>En resumen: el orden dónde se llama a las cosas</p>
+                    <aside class="notes">
+                        No da tiempo a explicar todo!
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Especificidad</h2>
+                    <pre><code>
+p.clase {
+    foo: bar; /* 1 */
+}
+.clase {
+    foo: baz; /* 2 */
+}
+                    </code></pre>
+                    <p>Pregunta ~trampa: qué regla se computa?</p>
+                </section>
+
+                <section>
+                    <h2>Especificidad: pesos.</h2>
+                    <p>Propiedad: acumulativa y </p>
+                    <dl>
+                        <dt>Cero (Excepción)</dt>
+                        <dd>Selector Universal</dd>
+                        <dt>Unidades</dt>
+                        <dd>"Número de tipos de selectores y pseudo-elementos"</dd>
+                        <dt>Decenas</dt>
+                        <dd>"Número de selectores de clase, atributo y pseudo-clases" 💩</dd>
+                        <dt>Centenas</dt>
+                        <dd>"Número de selectores de ID" 💩💩</dd>
+                        <dt class="fragment">Millares</dt>
+                        <dd class="fragment">Estilos en línea 💩💩💩</dd>
+                    </dl>
+                </section>
+
+
+
+                <section>
+                    <h2>Importancia</h2>
+                    <pre><code>
+.clase {
+    foo: bar!important; /* 1 */
+}
+.clase {
+    foo: baz; /* 2 */
+}
+                    </code></pre>
+                    <ul>
+                        <li>
+                            <code>!important</code> es el reflejo de maquetadores/as vagos/as!
+                            <i class="fragment">💥</i>
+                        </li>
+                        <li class="fragment">Pero también (casi) la única manera de deshacerse de estilos
+                            <em>inline</em> (JS)</li>
                     </ul>
                 </section>
 
                 <section>
+                    <h2>Recapitulando conceptos</h2>
+                    <br>
+                    <ol>
+                        <li class=""><em>Block level</em> + <em>inline level</em></li>
+                        <br>
+                        <li class="">Modelo de caja (+ <code>border-box</code>)</li>
+                        <br>
+                        <li class="fragment">Concepto de herencia</li>
+                        <br>
+                        <li class="fragment"><em>Debuggear</em> herencia</li>
+                        <br>
+                        <li class="fragment">Resumen del concepto de cascada</li>
+                        <br>
+                        <li class="fragment">Especificidad</li>
+                    </ol>
+                    <aside class="notes">
+                        Son 6
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Última sección</h2>
+                </section>
+
+                <section style="margin-top:-10%">
                     <h2>Convenciones de <em>naming</em></h2>
+                    <p>Algunas, también, paradigmas de arquitectura 🏰</p>
                     <ul>
                         <li><a href="http://getbem.com/naming/">BEM</a></li>
                         <li>
@@ -353,30 +477,30 @@ box-sizing: content-box;</code></pre>
                             <a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528">
                                 ITCSS
                             </a>
+                            <a href="https://github.com/inuitcss/inuitcss">(inuitcss)</a>
                         </li>
                         <li>
                             <a href="https://suitcss.github.io/"
-                                title="[<namespace>-]<ComponentName>[-descendentName][--modifierName]">SUITCSS</a>
+                               title="[<namespace>-]<ComponentName>[-descendentName][--modifierName]">SUITCSS</a>
                         </li>
+                        <li>Otras...</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>HTML semántico</h2>
-                    <h3>Cómo nombres a las clases depende de la convención que se elija</h3>
+                    <h3>Cómo nombras a las clases depende de la convención que elijas (arbitrariedad)</h3>
                     <p class="fragment">Tantas convenciones como Frameworks de JS!</p>
-                    <p class="fragment">Son arbitrarias. El HTML, no.</p>
-                    <div style="position: relative">
-                        <pre style="position: absolute; top: 0; left: 50%; transform: translateX(-50%)"
-                             class="fragment fade-out"><code>
+                    <p class="fragment">El HTML no es arbitrario.</p>
+                    <div class="relative">
+                        <pre class="fragment fade-out absolute-center"><code>
 <div class="list">
     <span class="block">texto</span>
     <span class="block">texto</span>
     <span class="block">texto</span>
 </div>
                     </code></pre>
-                    <pre style="position: absolute; top: 0; left: 50%; transform: translateX(-50%)"
-                         class="fragment current-visible"><code>
+                    <pre class="fragment current-visible absolute-center"><code>
 <!-- SuitCSS -->
 <ul class="myBlock-list">
     <li class="c-list-item">texto</li>
@@ -384,9 +508,8 @@ box-sizing: content-box;</code></pre>
     <li class="c-list-item">texto</li>
 </ul>
                     </code></pre>
-                    <pre style="position: absolute; top: 0; left: 50%; transform: translateX(-50%)"
-                         class="fragment current-visible"><code>
-<!--
+                    <pre class="fragment current-visible absolute-center"><code>
+<!-- 👵👴🙅🙈
 ARIA: https://www.w3.org/TR/wai-aria/roles#listitem -->
 <div role="list" class="my-awesome-list">
     <span role="listitem" class="block">texto</span>
@@ -395,6 +518,97 @@ ARIA: https://www.w3.org/TR/wai-aria/roles#listitem -->
 </div>
                     </code></pre>
                     </div>
+                </section>
+
+                <section>
+                    <h2>Buenas prácticas en proyectos grandes:</h2>
+                    <ul style="max-height: 70vh; overflow-y: auto">
+                        <li>Aplicar convención de <em>naming</em> + arquitectura</li>
+                        <li class="fragment">Dar estilo por componentes?
+                            (<a href="https://github.com/css-modules/css-modules">CSS Modules</a>,
+                            <a href="http://vuejs.org/v2/guide/class-and-style.html#Object-Syntax-1">VueJS</a>,
+                            <a href="https://styled-components.com/">React</a>)</li>
+                        <li class="fragment">Tener una guía de estilo! <i>📑</i></li>
+                        <li class="fragment">Linteo: <a href="https://github.com/stylelint/stylelint">StyleLint</a></li>
+                        <li class="fragment">
+                            Test: Ej:
+                            <a href="https://visualregressiontesting.com/tools.html">PhantomCSS</a>
+                        </li>
+                        <li class="fragment">Nunca <code>!important</code>s, estilos en línea, selectores de ID...</li>
+                        <li class="fragment">Utilizar primero las las librerías de front que trae el proyecto (Ej: Bootstrap).</li>
+                        <li class="fragment">Con cada funcionalidad, intentar añadir cada vez menos CSS</li>
+                        <li class="fragment">Nombres de todo siempre en inglés</li>
+                        <li class="fragment">Reducir el número de MNs</li>
+                        <li class="fragment">Usas sass? Mixins. Listas. Iteración. Constantes globales...</li>
+                    </ul>
+                    <aside class="notes">
+                        Si da tiemp, enseñar el ejemplo de listas
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>
+                        ToDo
+                    </h2>
+                    <ul>
+                        <li>Centrado Vertical</li>
+                        <li>Diseño Responsive</li>
+                        <li>Ejemplos reales en proyectos grandes</li>
+                        <li>Optimización con DevTools</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Selectores de <a href="https://developers.google.com/web/tools/chrome-devtools/console/">
+                            DevTools:</a></h3>
+                        <ul>
+                            <li><code>$</code></li>
+                            <li><code>$$</code></li>
+                            <li><code>$x("//p[a]")</code></li>
+                            <li><code>$0 // ($1, $2, $3...)</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Métodos Console API</h4>
+                        <ul>
+                            <li><code>copy()</code></li>
+                            <li><code>clear()</code></li>
+                            <li><code>dir()</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Hacer del documento <code>contenteditable="true"</code></h3>
+                        <ul>
+                            <li style=" max-width: 80vw;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;">
+                                <code>document.designMode = 'on'</code>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>
+                            devMode
+                        </h3>
+                        <pre><code data-trim contenteditable>
+<!-- sass -->
+*,
+*:before,
+:after {
+    background-color: rgba(255, 0, 0, .15);
+}
+                    </code></pre>
+                    <img src="img/devmode.png">
+                    </section>
+                </section>
+
+                <section>
+                    <h2>
+                        Muchas gracias!
+                    </h2>
+                    <p>🙏✊💪😋</p>
                 </section>
 
             </div>
