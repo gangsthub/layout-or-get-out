@@ -11,3 +11,6 @@ Charla de CSS orientada a programadores/as que quieren aprender a usar CSS.
 * Tampoco pensada para gente con cero conocimientos en la materia.
 
 En 40 minutos, a ver qué entra. ^__^
+
+### Uso
+Lanzar con `npm start`
