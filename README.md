@@ -2,7 +2,11 @@
 
 > [ONLY SPANISH]
 
+###URL:
+https://gangsthub.github.io/layout-or-get-out/
+
 ## Taller CSS
+
 
 Charla de CSS orientada a programadores/as que quieren aprender a usar CSS.
 
